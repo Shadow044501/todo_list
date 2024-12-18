@@ -1,0 +1,400 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #524f4f;
+  background-color: #f4f4f4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+
+  
+}
+
+
+.loadingText {
+  text-align: "center";
+  color: "#999";
+  font-style: "italic";
+}
+a {
+  font-weight: 500;
+  color:#a61edb;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #a61edb;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.3em;
+  line-height: 1.1;
+}
+.taskdo-container p{
+font-weight: 650;
+font-size: 19px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: #5E5E5E;
+
+
+}
+
+.task-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 30px; 
+  text-align: center;
+}
+
+/* Title */
+.taskdo-container h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  color: #524f4f;
+}
+
+
+.add-task-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.add-task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a61edb; 
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 400px;
+}
+
+
+.plus-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a61edb; /* Background color of the plus icon */
+  color: white; /* Color of the plus sign */
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%; /* Makes it a circle */
+  width: 24px; /* Circle diameter */
+  height: 24px;
+  margin-right: 8px; /* Space between the plus icon and the text */
+  text-align: center; /* Ensures the plus sign is centered inside the circle */
+  
+  /* Position properties */
+  position: relative; /* This ensures the plus icon stays in the right place */
+ 
+}
+
+
+
+.add-task-button {
+  color: #a61edb;
+}
+
+.add-task-button:hover {
+  text-decoration: underline;
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+.task-text {
+  flex: 1;
+  text-align: left;
+  color: #524f4f;
+  font-size: 18px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+
+.task-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.task-checkbox:not(.completed) {
+  background-color: white;
+}
+
+
+.task-checkbox.completed {
+  background-color: #1E9CEA; /* Teal background */
+  border-color: #1E9CEA; /* Teal border */
+  position: relative; /* Ensure ::after can be positioned relative to this */
+}
+
+/* Add a custom image as a checkmark */
+.task-checkbox.completed::after {
+  content: ""; /* Clear text content */
+  display: block; /* Make it act like an inline image */
+  width: 16px; /* Adjust to the size of the image */
+  height: 16px;
+  background-image: url("../src/assets/checkmark.png"); /* Replace with your desired image URL */
+  background-size: contain; /* Ensure the image scales correctly */
+  background-repeat: no-repeat; /* Prevent repeating */
+  position: absolute; /* Position relative to the parent */
+  top: 50%; /* Center vertically */
+  right: 1px; /* Position on the right side */
+  transform: translateY(-50%); /* Perfect vertical centering */
+}
+/* Delete button */
+.task-delete {
+  margin-right: 16px; /* Add spacing between trash can and task text */
+  order: -1; /* Move the trash can to the beginning of the flex container */
+  background: none;
+  border: none;
+  color: #1E9CEA; 
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  color: #1E9CEA;
+}
+
+/* CSS */
+
+
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #a61edb;
+  border: 2px solid;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+/* CSS */
+.button-79 {
+  backface-visibility: hidden;
+  background: #1E9CEA;
+  border: 0;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 5px;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-79:disabled {
+  color: #787878;
+  cursor: auto;
+}
+
+.button-79:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button-79:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.button-79:focus {
+  outline: 0 solid transparent;
+}
+
+.button-79:focus:before {
+  border-width: .125rem;
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.button-79:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.button-79:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+/* CSS */
+.button-80 {
+  backface-visibility: hidden;
+  background: #e4233c;
+  border: 0;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 5px;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-80:disabled {
+  color: #787878;
+  cursor: auto;
+}
+
+.button-80:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button-80:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.button-80:focus {
+  outline: 0 solid transparent;
+}
+
+.button-80:focus:before {
+  border-width: .125rem;
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.button-80:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.button-80:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+@media (min-width: 768px) {
+  .button-38 {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #c8cfd6;
+    background-color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
