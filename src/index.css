@@ -20,9 +20,9 @@
 
 
 .loadingText {
-  text-align: "center";
-  color: "#999";
-  font-style: "italic";
+  text-align: center;
+  color: #999;
+  font-style: italic;
 }
 a {
   font-weight: 500;
@@ -376,4 +376,4 @@ color: #5E5E5E;
   button {
     background-color: #f9f9f9;
   }
-}
+
