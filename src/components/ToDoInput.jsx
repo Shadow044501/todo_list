@@ -32,7 +32,8 @@ function ToDoInput({ onAddTask, onCancel }) {
             border: "1px solid #ccc",
             borderRadius: "6px", // Slightly rounder corners
             marginBottom: "10px",
-            marginLeft: "100px", // Horizontally center using margin auto 
+            marginLeft: "100px",
+            marginRight:"100px",// Horizontally center using margin 
           }}
 
         />
